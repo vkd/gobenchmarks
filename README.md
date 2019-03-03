@@ -8,9 +8,10 @@ Benchmarks of golang code
 ## Reflect check type
 
 ```
-BenchmarkReflectCheckTypeInterfaceSwitch-4   	1000000000	         9.36 ns/op
-BenchmarkReflectCheckTypeInterfaceIf-4       	1000000000	         9.57 ns/op
-BenchmarkReflectCheckTypeEquals-4            	1000000000	         9.38 ns/op
+$ go test -benchmem -run=NONE -bench=BenchmarkReflectCheckType -benchtime=10s
+BenchmarkReflectCheckTypeInterfaceSwitch-4   	2000000000	         9.35 ns/op
+BenchmarkReflectCheckTypeInterfaceIf-4       	2000000000	         9.35 ns/op
+BenchmarkReflectCheckTypeEquals-4            	2000000000	         9.37 ns/op
 ```
 
 ```
